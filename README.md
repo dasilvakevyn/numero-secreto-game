@@ -1,73 +1,60 @@
-Jogo do Número Secreto 🔢
+# Jogo do Número Secreto 🔢
 Um simples e divertido jogo de adivinhação desenvolvido em JavaScript, HTML e CSS. O objetivo é adivinhar o número secreto gerado aleatoriamente dentro de um intervalo definido, recebendo dicas a cada tentativa.
 
-🚀 Tecnologias Utilizadas
-JavaScript: Lógica principal do jogo, manipulação do DOM e interação.
+## 🚀 Tecnologias Utilizadas
+* **JavaScript:** Lógica principal do jogo, manipulação do DOM e interação.
+* **HTML:** Estrutura e containers do projeto, incluindo elementos para interação (títulos, imagens).
+* **CSS:** Estilização da interface, layout responsivo e design visual atraente.
 
-HTML: Estrutura e containers do projeto, incluindo elementos para interação (títulos, imagens).
+## ✨ Funcionalidades
+* Geração de um número secreto aleatório (entre 1 e 5000, configurável).
+* Interface visualmente agradável com elementos de design.
+* Feedback instantâneo ao jogador (mensagens na tela indicando se o palpite foi muito alto ou muito baixo).
+* Contagem de tentativas para descobrir o número.
+* Mensagem de vitória ao acertar o número, informando o número de tentativas, exibida diretamente na interface.
 
-CSS: Estilização da interface, layout responsivo e design visual atraente.
+## 🕹️ Como Jogar
+1.  **Abra o arquivo `index.html`** em qualquer navegador web moderno.
+2.  A interface do jogo será carregada, apresentando um título e elementos visuais.
+3.  Você deverá interagir com os elementos na tela (provavelmente um campo de entrada e um botão, que seriam adicionados ao HTML e gerenciados pelo JS) para fazer seu palpite.
+4.  As mensagens de feedback (maior/menor) aparecerão na tela, guiando você.
+5.  Continue tentando até acertar o número.
+6.  Ao acertar, a interface se atualizará para mostrar a mensagem de vitória, o número secreto e o total de tentativas.
 
-✨ Funcionalidades
-Geração de um número secreto aleatório (entre 1 e 5000, configurável).
+## 💻 Como Executar o Projeto Localmente
+1.  **Clone este repositório:**
 
-Interface visualmente agradável com elementos de design.
+    ```bash
+    git clone [https://github.com/SEU_USUARIO/nome-do-seu-repositorio.git](https://github.com/SEU_USUARIO/nome-do-seu-repositorio.git)
+    ```
+    (Lembre-se de substituir `SEU_USUARIO` e `nome-do-seu-repositorio` pelos seus dados reais.)
 
-Feedback instantâneo ao jogador (mensagens na tela indicando se o palpite foi muito alto ou muito baixo).
+2.  **Navegue até a pasta do projeto:**
 
-Contagem de tentativas para descobrir o número.
+    ```bash
+    cd nome-do-seu-repositorio
+    ```
 
-Mensagem de vitória ao acertar o número, informando o número de tentativas, exibida diretamente na interface.
+3.  **Abra o arquivo `index.html` no seu navegador preferido.**
+    Você pode simplesmente clicar duas vezes no arquivo no explorador de arquivos ou usar o comando (dependendo do seu sistema operacional):
+    * **Windows:** `start index.html`
+    * **macOS:** `open index.html`
+    * **Linux:** `xdg-open index.html`
 
-🕹️ Como Jogar
-Abra o arquivo index.html em qualquer navegador web moderno.
+## 📄 Estrutura do Projeto
 
-A interface do jogo será carregada, apresentando um título e elementos visuais.
-
-Você deverá interagir com os elementos na tela (provavelmente um campo de entrada e um botão, que seriam adicionados ao HTML e gerenciados pelo JS) para fazer seu palpite.
-
-As mensagens de feedback (maior/menor) aparecerão na tela, guiando você.
-
-Continue tentando até acertar o número.
-
-Ao acertar, a interface se atualizará para mostrar a mensagem de vitória, o número secreto e o total de tentativas.
-
-💻 Como Executar o Projeto Localmente
-Clone este repositório:
-
-Bash
-
-`````git clone https://github.com/SEU_USUARIO/nome-do-seu-repositorio.git`````
-(Lembre-se de substituir SEU_USUARIO e nome-do-seu-repositorio pelos seus dados reais.)
-
-Navegue até a pasta do projeto:
-
-Bash
-
-`````cd nome-do-seu-repositorio`````
-Abra o arquivo index.html no seu navegador preferido.
-Você pode simplesmente clicar duas vezes no arquivo no explorador de arquivos ou usar o comando (dependendo do seu sistema operacional):
-
-Windows: start index.html
-
-macOS: open index.html
-
-Linux: xdg-open index.html
-
-📄 Estrutura do Projeto
-index.html (Estrutura HTML)
-HTML
-
-```<!DOCTYPE html>
+### `index.html` (Estrutura HTML)
+```html
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo Secreto - Game JS</title>
     <link rel="stylesheet" href="/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
+    <link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)">
+    <link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+    <link href="[https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap](https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap)"
         rel="stylesheet">
 </head>
 <body>
@@ -85,12 +72,10 @@ HTML
     </div>
     <script src="/app.js" defer></script>
 </body>
-</html>```
-
-style.css (Estilização CSS)
-CSS
-
-`````* {
+</html>
+```
+### `style.css` (Estilização CSS)
+```* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -143,7 +128,6 @@ body::before {
     padding: 20px;
 }
 
-/* .container_botao is present in CSS but not in the provided HTML. It would typically be a button for "chute" */
 .container_botao {
     border-radius: 16px;
     background: #1875e8;
@@ -177,22 +161,10 @@ button {
 h2 {
     font-size: 32px;
     font-weight: 600;
-}`````
-app.js (Lógica JavaScript)
-JavaScript
-
-// NOTE: Your HTML links to app.js, but the JS you provided previously
-// was intended for browser alerts/prompts and not direct DOM manipulation
-// of the HTML structure provided.
-//
-// If app.js should interact with the HTML elements (e.g., update <h1>, <h2>,
-// handle button clicks, read input field values), the JavaScript code
-// would need to be adapted to select and manipulate those elements.
-//
-// For now, including the JS as provided previously, assuming it would be
-// adapted to work with the UI.
-
-alert('Bem-vindo ao jogo do Número Secreto!');
+}
+```
+### `app.js` (Lógica JavaScript)
+```alert('Bem-vindo ao jogo do Número Secreto!');
 
 let numeroMaximo = 5000;
 let numeroSecreto = parseInt(Math.random() * numeroMaximo + 1);
@@ -216,8 +188,9 @@ while (chute != numeroSecreto) {
 
 let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
 alert(`Você acertou! O número secreto é ${numeroSecreto} com ${tentativas} ${palavraTentativa}!`);
-🤝 Contribuição
+```
+## 🤝 Contribuição
 Sinta-se à vontade para sugerir melhorias, reportar bugs ou abrir Pull Requests! Toda contribuição é bem-vinda.
 
-📝 Licença
+## 📝 Licença
 Este projeto está licenciado sob a Licença MIT.
