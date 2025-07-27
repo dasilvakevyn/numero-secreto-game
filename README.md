@@ -37,14 +37,14 @@ Clone este repositório:
 
 Bash
 
-git clone https://github.com/SEU_USUARIO/nome-do-seu-repositorio.git
+`````git clone https://github.com/SEU_USUARIO/nome-do-seu-repositorio.git`````
 (Lembre-se de substituir SEU_USUARIO e nome-do-seu-repositorio pelos seus dados reais.)
 
 Navegue até a pasta do projeto:
 
 Bash
 
-cd nome-do-seu-repositorio
+`````cd nome-do-seu-repositorio`````
 Abra o arquivo index.html no seu navegador preferido.
 Você pode simplesmente clicar duas vezes no arquivo no explorador de arquivos ou usar o comando (dependendo do seu sistema operacional):
 
@@ -58,7 +58,7 @@ Linux: xdg-open index.html
 index.html (Estrutura HTML)
 HTML
 
-<!DOCTYPE html>
+```<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -85,11 +85,12 @@ HTML
     </div>
     <script src="/app.js" defer></script>
 </body>
-</html>
+</html>```
+
 style.css (Estilização CSS)
 CSS
 
-* {
+`````* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -176,7 +177,7 @@ button {
 h2 {
     font-size: 32px;
     font-weight: 600;
-}
+}`````
 app.js (Lógica JavaScript)
 JavaScript
 
