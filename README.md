@@ -9,6 +9,7 @@ Um simples e divertido jogo de adivinhação desenvolvido em JavaScript, HTML e 
 ## ✨ Funcionalidades
 * Geração de um número secreto aleatório (entre 1 e 5000, configurável).
 * Interface visualmente agradável com elementos de design.
+* Verifica se a entrada não for um número válido, pedindo para tentar novamente sem consumir uma tentativa.
 * Feedback instantâneo ao jogador (mensagens na tela indicando se o palpite foi muito alto ou muito baixo).
 * Contagem de tentativas para descobrir o número.
 * Mensagem de vitória ao acertar o número, informando o número de tentativas, exibida diretamente na interface.
@@ -17,9 +18,11 @@ Um simples e divertido jogo de adivinhação desenvolvido em JavaScript, HTML e 
 1.  **Abra o arquivo `index.html`** em qualquer navegador web moderno.
 2.  A interface do jogo será carregada, apresentando um título e elementos visuais.
 3.  Você deverá interagir com os elementos na tela (provavelmente um campo de entrada e um botão, que seriam adicionados ao HTML e gerenciados pelo JS) para fazer seu palpite.
-4.  As mensagens de feedback (maior/menor) aparecerão na tela, guiando você.
+4. **Se você digitar algo que não seja um número, o jogo avisará e pedirá uma nova entrada, sem contar como tentativa.**
 5.  Continue tentando até acertar o número.
-6.  Ao acertar, a interface se atualizará para mostrar a mensagem de vitória, o número secreto e o total de tentativas.
+6.  As mensagens de feedback (maior/menor) aparecerão na tela, guiando você.
+7.  Continue tentando até acertar o número.
+8.  Ao acertar, a interface se atualizará para mostrar a mensagem de vitória, o número secreto e o total de tentativas.
 
 ## 💻 Como Executar o Projeto Localmente
 1.  **Clone este repositório:**
@@ -51,15 +54,21 @@ Para ver a Estilização CSS do projeto, clique [aqui](https://github.com/dasilv
 
 ### `app.js` (Lógica JavaScript)
 ```
-alert('Bem-vindo ao jogo do Número Secreto!');
+alert('Bem-vindo ao Game Número Secreto!');
 
 let numeroMaximo = 5000;
 let numeroSecreto = parseInt(Math.random() * numeroMaximo + 1);
 let chute;
-let tentativas = 1;
+tentativas = 1;
 
 while (chute != numeroSecreto) {
-    chute = prompt(`Digite um número entre 1 a ${numeroMaximo}:`);
+    let entrada = prompt(`Digite um número entre 1 a ${numeroMaximo}: `);
+    chute = parseInt(entrada);
+
+    if (isNaN(chute) || entrada === null || entrada.trim() === ''){
+        alert('Por favor, digite um número válido!');
+        continue;
+    }
 
     if (chute == numeroSecreto) {
         break;
@@ -69,12 +78,13 @@ while (chute != numeroSecreto) {
         } else {
             alert(`O número secreto é maior do que o ${chute}!`);
         }
+        tentativas ++;
     }
-    tentativas++;
 }
 
 let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
-alert(`Você acertou! O número secreto é ${numeroSecreto} com ${tentativas} ${palavraTentativa}!`);
+
+alert(`Você acertou! O número secreto é ${numeroSecreto} com ${tentativas} ${palavraTentativa}!!!!`);
 ```
 ## 🤝 Contribuição
 Sinta-se à vontade para sugerir melhorias, reportar bugs ou abrir Pull Requests! Toda contribuição é bem-vinda.

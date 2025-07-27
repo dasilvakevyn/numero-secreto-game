@@ -6,7 +6,13 @@ let chute;
 tentativas = 1;
 
 while (chute != numeroSecreto) {
-    chute = prompt(`Digite um número entre 1 a ${numeroMaximo}: `);
+    let entrada = prompt(`Digite um número entre 1 a ${numeroMaximo}: `);
+    chute = parseInt(entrada);
+
+    if (isNaN(chute) || entrada === null || entrada.trim() === ''){
+        alert('Por favor, digite um número válido!');
+        continue;
+    }
 
     if (chute == numeroSecreto) {
         break;
