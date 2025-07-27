@@ -50,7 +50,8 @@ Para ver a estrutura HTML do projeto, clique [aqui](https://github.com/dasilvake
 Para ver a Estilização CSS do projeto, clique [aqui](https://github.com/dasilvakevyn/numero-secreto-game/blob/main/style.css).
 
 ### `app.js` (Lógica JavaScript)
-```alert('Bem-vindo ao jogo do Número Secreto!');
+```
+alert('Bem-vindo ao jogo do Número Secreto!');
 
 let numeroMaximo = 5000;
 let numeroSecreto = parseInt(Math.random() * numeroMaximo + 1);
