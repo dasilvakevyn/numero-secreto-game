@@ -88,6 +88,7 @@ alert(`Você acertou! O número secreto é ${numeroSecreto} com ${tentativas} ${
 ```
 ## 🤝 Contribuição
 Sinta-se à vontade para sugerir melhorias, reportar bugs ou abrir Pull Requests! Toda contribuição é bem-vinda.
+Deixe também comentários!
 
 ## 📝 Licença
 Este projeto está licenciado sob a Licença MIT.
